@@ -26,4 +26,13 @@ public class OrangeHRM_page {
 
     @FindBy(className = "page-title")
     public  WebElement pageTitle;
+
+    @FindBy(id = "user-dropdown")
+    public WebElement dropDownBtn;
+
+    @FindBy(id ="logoutLink")
+    public WebElement logOutLink;
+
+    @FindBy(className ="dashboardCard-title-for-card")
+    public WebElement retryText;
 }

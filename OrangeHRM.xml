@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="OrangeHRM Tests">
+<suite name="OrangeHRM Tests" parallel="tests" thread-count="2">
 
-    <parameter name="driverName" value="chrome"></parameter>
     <test name="Parameter Test">
+        <parameter name="driverName" value="chrome"></parameter>
+
         <classes>
 
-            <class name="com.techtorial.Tests.TestNG_ParametersAnotation.OrangeHRMTest"> </class>
+            <class name="com.techtorial.Tests.TestNG_ParametersAnotation.OrangeHRMProviders"> </class>
+
+        </classes>
+
+    </test>
+
+    <test name="Parallel Test">
+        <parameter name="driverName" value="chrome"></parameter>
+
+        <classes>
+
+            <class name="com.techtorial.Tests.TestNG_ParametersAnotation.OrangeHRMProviders"> </class>
 
         </classes>
 
